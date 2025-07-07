@@ -9,12 +9,6 @@
         <link rel="stylesheet" href="./Valentine Confession_files/valentine-confession.css">
         <title>Valentine Confession</title>
     </head>
-    <audio id="bg-music" src="wave_to_earth_bad.mp3" autoplay loop></audio>
-<script>
-  const music = document.getElementById('bg-music');
-        music.volume = 1.0; // Atur volume (0.0 - 1.0)
-</script>
-        
     <body>
         <p class="instruction">Click the heart!</p>
         <div class="container" style="background-color: rgb(244, 143, 177);">
@@ -42,11 +36,26 @@
                  </div>
             </div>
         </div>
+            <audio id="bg-music" src="wave_to_earth_bad.mp3" loop></audio>
+<script>
+const card = document.getElementById('card');
+const music = document.getElementById('bg-music');
+let opened = false;
+card.addEventListener('click', () => {
+    card.classList.toggle('opened');
+    if (!opened) {
+        music.play();
+        opened = true;
+    }
+});
+</script>
+</body>
+</html>
         
         <script src="./Valentine Confession_files/jquery.js.download"></script>
         <script src="./Valentine Confession_files/jquery2.1.js.download"></script>
-        <script defer="" src="./Valentine Confession_files/valentine-confession.js.download"></script>
-    
-
-
-</body></html>
+        <script defer="" src="./Valentine Confession_files/valentine-confession.js.download">
+                
+</script>
+</body>
+</html>
